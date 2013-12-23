@@ -78,12 +78,6 @@ class PlgSystemClearcache extends JPlugin
 			}
 
 			$model->cleanlist($cid);
-
-			// Get the full current URI.
-			$uri = JUri::getInstance();
-			$uri->setQuery(str_replace('&clearcache=1', '', $uri->getQuery()));
-
-			$app->redirect($uri->toString(), true);
 		}
 
 		$this->displayLink();
